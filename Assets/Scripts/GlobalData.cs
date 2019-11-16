@@ -3,25 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+
+///// Optional (able)
+// 0 - fire {1,0}
+// 1 - take {1,0}
+// 2 - impact {1,0}
+// 3 - shoot {1,0}
+// 4 - decrafting {1,0}
+///// Variable 
+// 5 - mass {1 ... 9}
+// 6 - strong lvl {1 ... 9}
+// 7 - eat lvl {1 ... 9}
+// 8 - HV(Health & Venom) lvl {1 ... 9}
+// 9..11 - Element id;
+
 public static class GlobalData
 {
     //// Inventory data
     public static Dictionary<string, int> inventoryElements = new Dictionary<string, int>();
     public static string rightHand = "";
-    public static string leftHand = "111001";
+    public static string leftHand = "";
     
-    private static string actionCode;
+    private static string eTag;
     private static GameObject elementGO;
 
     // functions utils
-    public static string get_action_code(string elementTag)
-    {
-        return string.Concat(elementTag[0], elementTag[1]);
-    }
-    public static string get_element_code(string elementTag)
-    {
-        return string.Concat(elementTag[2], elementTag[3],elementTag[4]);
-    }
+
 
     // main functions
     static void takeAction(RaycastHit hit)
@@ -61,8 +68,7 @@ public static class GlobalData
                 // newObject = GameObject.Instantiate(GameObject.FindGameObjectWithTag("11100" + eTag[5]));
                 // newObject.transform.position = hit.transform.position;
                 // newObject = GameObject.Instantiate(GameObject.FindGameObjectWithTag("11100" + eTag[5]));
-                // ///
-                Debug.Log(x.ToString() + "-" + y.ToString() + "-" + z.ToString());
+                // 
                 //newObject.transform.position.Set(x,y,z);
                 //newObject.transform.rotation = hit.transform.rotation;
                 GameObject.Destroy(hit.transform.gameObject);
@@ -72,7 +78,6 @@ public static class GlobalData
         {
             if(leftHand == "111001" && rightHand == leftHand)
             {
-                Debug.Log(rightHand);
                 hit.transform.Find("Torch").gameObject.SetActive(true);
                 hit.transform.tag = "000005";
             }
@@ -80,21 +85,19 @@ public static class GlobalData
     }
     public static void doAction(RaycastHit hit)
     {
-        actionCode = get_action_code(hit.transform.tag);
+        eTag = hit.transform.tag;
         
         if(rightHand == "")
         {
-            if(actionCode[0] == '1')
+            if(eTag[1] == '1')
             {
                 takeAction(hit);
             }
         }
         else
         {
-            Debug.Log("asd");
-            if(rightHand[1] == '1')
+            if(rightHand[2] == '1')
             {
-                Debug.Log('1');
                 useAction(hit);
             }
         } 
