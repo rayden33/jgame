@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4140205081755799248}
   - component: {fileID: 4140205081754799120}
   m_Layer: 0
-  m_Name: modelBonfire
-  m_TagString: Untagged
+  m_Name: afterFire
+  m_TagString: 100144
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
