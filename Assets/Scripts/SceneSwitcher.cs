@@ -5,12 +5,12 @@ public class SceneSwitcher : MonoBehaviour
 {
     public void GotoMainScene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Video");
     }
 
     public void GotoMenuScene()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Menu 3D");
     }
 
 }

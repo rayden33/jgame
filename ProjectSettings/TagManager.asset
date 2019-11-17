@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - 100144
-  - EventSystem
-  - 00001
-  - Canvas
-  - 111004
-  - 111001
-  - 111002
+  tags: []
   layers:
   - Default
   - TransparentFX
