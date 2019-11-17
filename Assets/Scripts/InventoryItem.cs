@@ -13,11 +13,11 @@ public class InventoryItem : MonoBehaviour
     public void CraftAction()
     {
         string aElement, bElement, cElement;
-        // aElement = playerCrafting.transform.Find("slot/a").GetComponent<Image>().sprite.name;
-        // bElement = playerCrafting.transform.Find("slot/b").GetComponent<Image>().sprite.name;
+         aElement = playerCrafting.transform.Find("slot/a").GetComponent<Image>().sprite.name;
+         bElement = playerCrafting.transform.Find("slot/b").GetComponent<Image>().sprite.name;
         // cElement = playerCrafting.transform.Find("slot/c").GetComponent<Image>().sprite.name;
-        aElement = "011104800002";
-        bElement = "011104800002";
+        // aElement = "011104800002";
+        // bElement = "011104800002";
         cElement = "";
         if(aElement != null && bElement != null && (cElement == null||cElement == ""))
         {
