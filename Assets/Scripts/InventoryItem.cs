@@ -14,17 +14,23 @@ public class InventoryItem : MonoBehaviour
     {
         string aElement, bElement, cElement;
 <<<<<<< HEAD
+<<<<<<< HEAD
          aElement = playerCrafting.transform.Find("slot/a").GetComponent<Image>().sprite.name;
          bElement = playerCrafting.transform.Find("slot/b").GetComponent<Image>().sprite.name;
         // cElement = playerCrafting.transform.Find("slot/c").GetComponent<Image>().sprite.name;
         // aElement = "011104800002";
         // bElement = "011104800002";
 =======
+=======
+>>>>>>> 18693f8... Script_fixing
         // aElement = playerCrafting.transform.Find("slot/a").GetComponent<Image>().sprite.name;
         // bElement = playerCrafting.transform.Find("slot/b").GetComponent<Image>().sprite.name;
         // cElement = playerCrafting.transform.Find("slot/c").GetComponent<Image>().sprite.name;
         aElement = "011104800002";
         bElement = "011104800002";
+<<<<<<< HEAD
+>>>>>>> 18693f8... Script_fixing
+=======
 >>>>>>> 18693f8... Script_fixing
         cElement = "";
         if(aElement != null && bElement != null && (cElement == null||cElement == ""))
