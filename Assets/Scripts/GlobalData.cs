@@ -20,46 +20,9 @@ using UnityEditor;
 public static class GlobalData
 {
     //// Inventory data
-    public static Dictionary<string, string> mainElements = new Dictionary<string, string>()
-    {
-        {"011115800011","rock(small)"},
-        {"011104800001","rock(knife)"},
-        {"111116500022","stick(large)"},
-        {"111103600002","stick"},
-        {"111104400003","bambook(large)"},
-        {"111104500004","palm_core"},
-        {"000013754055","molusk"},
-        {"010103363006","fish"},
-        {"010103363v06","fish"},
-        {"000011226+88","plant(+)"},
-        {"000011226-88","plant(-)"},
-        {"000011226=88","plant(=)"},
-        {"000011226+08","drugs"},
-        {"011107800012","axe"},
-        {"011109800122","lance"},
-        {"000015800099","water(big)"},
-        {"000015800s99","water(big,solid)"},
-        {"010014000049","water in palm core"},
-        {"010014000s49","water solid in palm core"},
-        {"010109747007","coco"}
-    };
-
-    // public static string[,] crafTable = new string[10,10]{
-    //     {"","","","","","","","","",""},
-    //     {"","022","","","","","","","",""},
-    //     {"","","","","","","","","",""},
-    //     {"","","","","","","","","",""},
-    //     {"","","","","","","","","",""},
-    //     {"","","","","","","","","",""},
-    //     {"","","","","","","","","",""},
-    //     {"","","","","","","","+88","",""},
-    //     {"","","","","","","","","",""},
-    //     {"","","","","","","","","",""}
-    // };
     public static Dictionary<string, int> inventoryElements = new Dictionary<string, int>();
-    public static string right = "";
-    public static string left = "";
-    public static bool syncElements;
+    public static string rightHand = "";
+    public static string leftHand = "";
     
     private static string eTag;
     private static GameObject elementGO;
@@ -70,13 +33,13 @@ public static class GlobalData
     // main functions
     static void takeAction(RaycastHit hit)
     {
-        right = hit.transform.tag;
+        rightHand = hit.transform.tag;
         Object.Destroy(hit.transform.gameObject);
     }
     static void takeToInventoryAction(RaycastHit hit)
     {
         string eTag = hit.transform.tag;
-        right = "";
+        rightHand = "";
         try {
             inventoryElements[eTag]+=1;
         }
@@ -87,7 +50,7 @@ public static class GlobalData
     static void useAction(RaycastHit hit)
     {
         string eTag = hit.transform.tag;
-        if (left == "")
+        if (leftHand == "")
         {
             if(eTag[3] == '1')
             {
@@ -113,7 +76,7 @@ public static class GlobalData
         }
         else
         {
-            if(left == "111001" && right == left)
+            if(leftHand == "111001" && rightHand == leftHand)
             {
                 hit.transform.Find("Torch").gameObject.SetActive(true);
                 hit.transform.tag = "000005";
@@ -124,7 +87,7 @@ public static class GlobalData
     {
         eTag = hit.transform.tag;
         
-        if(right == "")
+        if(rightHand == "")
         {
             if(eTag[1] == '1')
             {
@@ -133,7 +96,7 @@ public static class GlobalData
         }
         else
         {
-            if(right[2] == '1')
+            if(rightHand[2] == '1')
             {
                 useAction(hit);
             }

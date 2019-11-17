@@ -21,8 +21,7 @@ public class RaycastAction : MonoBehaviour
              RaycastHit hit;
              Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
              if (Physics.Raycast(ray, out hit, actionRange))
-                //Debug.Log(hit.transform.tag);
-                if(hit.transform != null && hit.transform.tag.Length == 12)
+                if(hit.transform != null && hit.transform.tag.Length == 6)
                 {
                     Debug.Log(hit.transform.tag);
                     GlobalData.doAction(hit);

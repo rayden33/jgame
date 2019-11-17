@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   - component: {fileID: 8434125939456735223}
-  - component: {fileID: -7568024210988359726}
+  - component: {fileID: -1909798345682821744}
   m_Layer: 0
   m_Name: small_rock
-  m_TagString: 011115800011
+  m_TagString: 111001
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &-7568024210988359726
+--- !u!65 &-1909798345682821744
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,0 +1,14 @@
+﻿C:\Users\PC\Desktop\t$m$p$$$\Autumnal-Boston 1.max
+C:\Users\PC\Desktop\t$m$p$$$\MAXFILES.TXT
+D:\DESIGN\TEXTURES\NATURE\Autumnal-Boston 1.jpg
+D:\DESIGN\TEXTURES\NATURE\Autumnal-Boston 1.2.jpg
+D:\DESIGN\TEXTURES\NATURE\Autumnal-Boston 1.1.jpg
+D:\DESIGN\TEXTURES\NATURE\Autumnal-Boston 2.jpg
+D:\DESIGN\TEXTURES\NATURE\Autumnal-Boston 2.2.jpg
+D:\DESIGN\TEXTURES\NATURE\Autumnal-Boston 2.1.jpg
+C:\Users\PC\Documents\3dsMax\_ivy_d.tga
+C:\Users\PC\Documents\3dsMax\_ivy_o.tga
+D:\DESIGN\TEXTURES\CONCRETE\Garage concrete texture-1.jpg
+C:\Users\PC\Documents\3dsMax\materiallibraries\vray-materials 2016\Architecture\Concrete Exterior_by_Advan_mx970\Concrete Exterior\Refl.jpg
+C:\Users\PC\Documents\3dsMax\materiallibraries\vray-materials 2016\Architecture\Concrete Exterior_by_Advan_mx970\Concrete Exterior\Displ.jpg
+D:\DESIGN\TEXTURES\HDRI\sky_lightblue.jpg
